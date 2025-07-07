@@ -7,7 +7,7 @@ export default function Index() {
     <View className="bg-blue-50 flex-1 items-center justify-center">
       <Text>Edit app/index.tsx to edit this screen.</Text>
       <TouchableOpacity onPress={() => router.navigate("/home")}>
-        Go to tabs
+        <Text>Go to tabs</Text>
       </TouchableOpacity>
     </View>
   );
