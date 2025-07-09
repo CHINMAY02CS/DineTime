@@ -7,13 +7,13 @@ const FrameImage = require("@/assets/images/Frame.png");
 export default function Index() {
   const router = useRouter();
   return (
-    <SafeAreaView className={`bg-[#F4E7E1]`}>
+    <SafeAreaView className={`bg-background`}>
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="m-2 flex items-center justify-center">
           <Image className="h-72 w-72" source={LogoImage} />
           <View className="w-3/4">
             <TouchableOpacity
-              className="p-2 my-2 bg-[#521C0D] rounded-lg"
+              className="p-2 my-2 bg-primary rounded-lg"
               onPress={() => router.push("/signup")}
             >
               <Text className="text-base font-semibold text-center text-white">
@@ -21,19 +21,19 @@ export default function Index() {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              className="p-2 my-2 border-[#521C0D] border rounded-lg max-w-fit"
+              className="p-2 my-2 border-primary border rounded-lg max-w-fit"
               onPress={() => router.push("/home")}
             >
-              <Text className="text-base font-semibold text-center text-[#521C0D]">
+              <Text className="text-base font-semibold text-center text-primary">
                 Guest User
               </Text>
             </TouchableOpacity>
           </View>
           <View>
-            <Text className="text-center text-base text-[#521C0D] my-4 font-semibold">
-              <View className="border-b-2 border-b-[#521C0D] p-2 mb-1 w-24" />{" "}
+            <Text className="text-center text-base text-primary my-4 font-semibold">
+              <View className="border-b-2 border-b-primary p-2 mb-1 w-24" />{" "}
               <Text className="text-black">or {""}</Text>
-              <View className="border-b-2 border-b-[#521C0D] p-2 mb-1 w-24" />
+              <View className="border-b-2 border-b-primary p-2 mb-1 w-24" />
             </Text>
             <TouchableOpacity
               className="p-2 my-2 rounded-lg flex items-center justify-center flex-row gap-2"
@@ -42,7 +42,7 @@ export default function Index() {
               <Text className="text-base font-semibold text-center text-black">
                 Already a user?
               </Text>
-              <Text className="text-base font-semibold text-center text-[#521C0D]">
+              <Text className="text-base font-semibold text-center text-primary">
                 Sign In
               </Text>
             </TouchableOpacity>

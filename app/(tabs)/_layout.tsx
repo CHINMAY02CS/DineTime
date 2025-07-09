@@ -12,10 +12,10 @@ const TabLayout = () => {
         tabBarStyle: {
           backgroundColor: Colors.SECONDARY,
           paddingBottom: 20,
-          height: 90,
+          height: 80,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 10,
           fontWeight: "bold",
         },
       }}
@@ -25,7 +25,7 @@ const TabLayout = () => {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={22} color={color} />
+            <Ionicons name="home" size={20} color={color} />
           ),
         }}
       />
@@ -34,7 +34,7 @@ const TabLayout = () => {
         options={{
           title: "History",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="time" size={22} color={color} />
+            <Ionicons name="time" size={20} color={color} />
           ),
         }}
       />
@@ -43,7 +43,7 @@ const TabLayout = () => {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person-sharp" size={22} color={color} />
+            <Ionicons name="person-sharp" size={20} color={color} />
           ),
         }}
       />

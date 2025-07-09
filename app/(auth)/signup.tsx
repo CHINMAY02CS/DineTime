@@ -27,11 +27,11 @@ export default function SignUp() {
   const router = useRouter();
 
   return (
-    <SafeAreaView className={`bg-[#F4E7E1]`}>
+    <SafeAreaView className={`bg-background`}>
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="m-2 flex items-center justify-center">
           <Image className="h-60 w-72" source={LogoImage} />
-          <Text className="text-lg text-center font-semibold text-[#521C0D] mb-6 -mt-10">
+          <Text className="text-lg text-center font-semibold text-primary mb-6 -mt-10">
             Let&apos;s get you started !
           </Text>
           <View className="w-3/4 grid gap-y-4">
@@ -51,7 +51,7 @@ export default function SignUp() {
             />
 
             <TouchableOpacity
-              className="p-2 mt-4 bg-[#521C0D] rounded-lg w-full"
+              className="p-2 mt-4 bg-primary rounded-lg w-full"
               onPress={signupForm.handleSubmit(onSubmit)}
             >
               <Text className="text-base font-semibold text-center text-white">
@@ -66,15 +66,15 @@ export default function SignUp() {
             <Text className="text-base font-semibold text-center text-black">
               Already a user?
             </Text>
-            <Text className="text-base font-semibold text-center text-[#521C0D]">
+            <Text className="text-base font-semibold text-center text-primary">
               Sign In
             </Text>
           </TouchableOpacity>
           <View>
-            <Text className="text-center text-base text-[#521C0D] font-semibold">
-              <View className="border-b-2 border-b-[#521C0D] w-24" />{" "}
+            <Text className="text-center text-base text-primary font-semibold">
+              <View className="border-b-2 border-b-primary w-24" />{" "}
               <Text className="text-black">or {""}</Text>
-              <View className="border-b-2 border-b-[#521C0D] p-2 w-24" />
+              <View className="border-b-2 border-b-primary p-2 w-24" />
             </Text>
             <TouchableOpacity
               className="p-2 my-2 rounded-lg flex items-center justify-center flex-row gap-2"
@@ -83,7 +83,7 @@ export default function SignUp() {
               <Text className="text-base font-semibold text-center text-black">
                 Login as
               </Text>
-              <Text className="text-base font-semibold text-center text-[#521C0D]">
+              <Text className="text-base font-semibold text-center text-primary">
                 Guest
               </Text>
             </TouchableOpacity>
