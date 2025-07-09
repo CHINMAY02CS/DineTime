@@ -42,7 +42,7 @@ export default function Index() {
               <Text className="text-base font-semibold text-center text-black">
                 Already a user?
               </Text>
-              <Text className="text-base font-semibold text-center text-[#521C0D] underline">
+              <Text className="text-base font-semibold text-center text-[#521C0D]">
                 Sign In
               </Text>
             </TouchableOpacity>
