@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-import { defaultSignUpSchemaValues, SignUpSchema } from "@/app/schemas/auth";
+import { defaultSignInSchemaValues, SignInSchema } from "@/app/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -10,13 +10,13 @@ const LogoImage = require("@/assets/images/dinetimelogo.png");
 const FrameImage = require("@/assets/images/Frame.png");
 
 export default function SignUp() {
-  const signupForm = useForm({
-    resolver: zodResolver(SignUpSchema),
-    defaultValues: defaultSignUpSchemaValues,
+  const signinForm = useForm({
+    resolver: zodResolver(SignInSchema),
+    defaultValues: defaultSignInSchemaValues,
   });
-  console.log(signupForm.formState.errors);
+  console.log(signinForm.formState.errors);
 
-  const errors = signupForm.formState.errors;
+  const errors = signinForm.formState.errors;
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -26,45 +26,44 @@ export default function SignUp() {
   return (
     <SafeAreaView className={`bg-[#F4E7E1]`}>
       <ScrollView contentContainerStyle={{ height: "100%" }}>
-        <View className="m-2 flex items-center justify-center">
+        <View className="m-2 mb-0 flex items-center justify-center">
           <Image className="h-60 w-72" source={LogoImage} />
           <Text className="text-lg text-center font-semibold text-[#521C0D] mb-6 -mt-10">
-            Let's get you started !
+            Welcome back!
           </Text>
           <View className="w-3/4 grid gap-y-4">
             <FormInput
-              form={signupForm}
+              form={signinForm}
               name="email"
               label="Email"
               keyboardType="email-address"
               errors={errors}
             />
             <FormInput
-              form={signupForm}
+              form={signinForm}
               name="password"
               label="Password"
               errors={errors}
               secureTextEntry
             />
-
             <TouchableOpacity
               className="p-2 mt-4 bg-[#521C0D] rounded-lg w-full"
-              onPress={signupForm.handleSubmit(onSubmit)}
+              onPress={signinForm.handleSubmit(onSubmit)}
             >
               <Text className="text-base font-semibold text-center text-white">
-                Sign Up
+                Sign In
               </Text>
             </TouchableOpacity>
           </View>
           <TouchableOpacity
             className="p-2 my-2 rounded-lg flex items-center justify-center flex-row gap-2"
-            onPress={() => router.push("/signin")}
+            onPress={() => router.push("/signup")}
           >
             <Text className="text-base font-semibold text-center text-black">
-              Already a user?
+              New user?
             </Text>
             <Text className="text-base font-semibold text-center text-[#521C0D]">
-              Sign In
+              Sign Up
             </Text>
           </TouchableOpacity>
           <View>
