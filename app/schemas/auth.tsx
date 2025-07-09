@@ -1,5 +1,8 @@
 import { z } from "zod";
 
+export type SignUpFormType = z.infer<typeof SignUpSchema>;
+export type SignInFormType = z.infer<typeof SignInSchema>;
+
 export const SignUpSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
   password: z

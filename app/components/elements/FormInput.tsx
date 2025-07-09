@@ -9,6 +9,7 @@ const FormInput = ({
   label,
   name,
   keyboardType,
+  secureTextEntry,
   ...props
 }: {
   form: any;
@@ -16,6 +17,7 @@ const FormInput = ({
   label: string;
   name: string;
   keyboardType?: any;
+  secureTextEntry?: boolean;
 }) => {
   return (
     <View className="w-full">

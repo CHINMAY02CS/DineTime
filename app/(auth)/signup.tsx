@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-import { defaultSignUpSchemaValues, SignUpSchema } from "@/app/schemas/auth";
+import {
+  defaultSignUpSchemaValues,
+  SignUpFormType,
+  SignUpSchema,
+} from "@/app/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,10 +18,9 @@ export default function SignUp() {
     resolver: zodResolver(SignUpSchema),
     defaultValues: defaultSignUpSchemaValues,
   });
-  console.log(signupForm.formState.errors);
 
   const errors = signupForm.formState.errors;
-  const onSubmit = (data) => {
+  const onSubmit = (data: SignUpFormType) => {
     console.log(data);
   };
 
@@ -29,7 +32,7 @@ export default function SignUp() {
         <View className="m-2 flex items-center justify-center">
           <Image className="h-60 w-72" source={LogoImage} />
           <Text className="text-lg text-center font-semibold text-[#521C0D] mb-6 -mt-10">
-            Let's get you started !
+            Let&apos;s get you started !
           </Text>
           <View className="w-3/4 grid gap-y-4">
             <FormInput

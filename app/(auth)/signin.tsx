@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-import { defaultSignInSchemaValues, SignInSchema } from "@/app/schemas/auth";
+import {
+  defaultSignInSchemaValues,
+  SignInFormType,
+  SignInSchema,
+} from "@/app/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,10 +18,9 @@ export default function SignUp() {
     resolver: zodResolver(SignInSchema),
     defaultValues: defaultSignInSchemaValues,
   });
-  console.log(signinForm.formState.errors);
 
   const errors = signinForm.formState.errors;
-  const onSubmit = (data) => {
+  const onSubmit = (data: SignInFormType) => {
     console.log(data);
   };
 
